@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://djskt64t06m4o"]
+
+[ext_resource type="PackedScene" uid="uid://fvp18jb5slyr" path="res://scenes/ground.tscn" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://8mc0mjhgop5a" path="res://scenes/tapController.cs" id="1_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://caogeyfgrsc32" path="res://scenes/player.tscn" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://bfntj7pj3hvde" path="res://scripts/playerController.cs" id="5_lquwl"]
+
+[node name="Node2D" type="Node2D" unique_id=1498293691 node_paths=PackedStringArray("mainCamera")]
+script = ExtResource("1_jyhfs")
+mainCamera = NodePath("MainCamera")
+
+[node name="MainCamera" type="Camera2D" parent="." unique_id=1564711115]
+
+[node name="Player" parent="." unique_id=1048705423 instance=ExtResource("2_0xm2m")]
+z_index = 1
+position = Vector2(4.9999995, 233)
+scale = Vector2(0.7199973, 1)
+script = ExtResource("5_lquwl")
+
+[node name="Ground" parent="." unique_id=601457838 instance=ExtResource("1_0xm2m")]

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://caogeyfgrsc32"]
+
+[ext_resource type="Texture2D" uid="uid://c2im4nwc4xv0q" path="res://images/icon.svg" id="1_4flbx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
+size = Vector2(652, 129)
+
+[node name="PlayerController" type="StaticBody2D" unique_id=409696016]
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1254916319]
+modulate = Color(1, 0, 0.69803923, 1)
+scale = Vector2(5.0859375, 1)
+texture = ExtResource("1_4flbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=453814562]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_4flbx")

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b8ccoxh17vndg"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=953944360]
+
+[node name="Wave Counter" type="Label" parent="." unique_id=1967742280]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+
+[node name="Touch Activated" type="Label" parent="." unique_id=531945813]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Touch"

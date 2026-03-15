@@ -1,0 +1,53 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="TapToDestory"
+run/main_scene="uid://djskt64t06m4o"
+config/features=PackedStringArray("4.6", "C#", "Mobile")
+config/icon="res://images/icon.svg"
+
+[autoload]
+
+GameManager="*uid://cfmhot3co3qqk"
+
+[display]
+
+window/size/viewport_width=480
+window/size/viewport_height=854
+window/stretch/mode="canvas_items"
+window/handheld/orientation=1
+
+[dotnet]
+
+project/assembly_name="TapToDestory"
+
+[file_customization]
+
+folder_colors={
+"res://images/": "blue",
+"res://scenes/": "red",
+"res://scripts/": "green"
+}
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

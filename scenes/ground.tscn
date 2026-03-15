@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://fvp18jb5slyr"]
+
+[ext_resource type="Texture2D" uid="uid://c2im4nwc4xv0q" path="res://images/icon.svg" id="1_yh8r4"]
+[ext_resource type="Script" uid="uid://i8ote800pwbj" path="res://scripts/spawnController.cs" id="2_8d803"]
+
+[node name="Background" type="Sprite2D" unique_id=601457838]
+modulate = Color(1, 0, 0, 0.24705882)
+scale = Vector2(3.9765625, 5.1171875)
+texture = ExtResource("1_yh8r4")
+script = ExtResource("2_8d803")
+
+[node name="spawnPointA" type="Node2D" parent="." unique_id=298185011]
+position = Vector2(-96.56581, -59.407635)
+scale = Vector2(0.2514735, 0.19541985)
+
+[node name="spawnPointB" type="Node2D" parent="." unique_id=105877874]
+position = Vector2(96.56582, -59.407635)
+scale = Vector2(0.2514735, 0.19541985)
+
+[node name="initalSpawn" type="Timer" parent="." unique_id=472698263]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="initalSpawn" to="." method="onInitialSpawnTimeout"]
